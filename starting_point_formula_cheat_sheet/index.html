@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Starting Point Formula Cheat Sheet</title>
+    <link rel=" stylesheet " href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css
+        " integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B " crossorigin="anonymous ">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col col-xs-8 p-3 m-3">
+                <h3>Starting Point Formula Calculator</h3>
+
+                <div class="form-group">
+                    <label for="bodyweight">Enter your body weight (lbs)</label>
+                    <input class="form-control" id="bodyweightInput" type="text" value="200" />
+                </div>
+
+                <div class="form-group">
+                    <label class="mr-4">Multiplier:</label>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" checked="checked" type="radio" name="inlineRadioOptions" id="fatLossRadioOption" value="fatLoss">
+                        <label class="form-check-label" for="inlineRadio1">Fat Loss</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="maintenanceRadioOption" value="maintenance">
+                        <label class="form-check-label" for="inlineRadio2">Maintenance</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="weightGainRadioOption" value="weightGain">
+                        <label class="form-check-label" for="inlineRadio3">Weight Gain</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="bodyweight">Calorie Target</label>
+                    <input class="form-control" id="calorieTargetInput" type="text" value="2000" />
+                </div>
+
+                <div class="form-group">
+                    <label for="ratioForm">Macro Ratios (%)</label>
+                    <div class="form-inline ml-2" id="ratioForm">
+                        <label for="bodyweight">Carb: </label>
+                        <input class="smallInput form-control" id="carbRatioInput" type="text" value="33.3" />
+                        <label for="bodyweight">Fat: </label>
+                        <input class="smallInput form-control" id="fatRatioInput" type="text" value="33.3" />
+                        <label for="bodyweight">Protein: </label>
+                        <input class="smallInput form-control" id="proteinRatioInput" type="text" value="33.3" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="numMeals">Number of Meals</label>
+                    <div class="dropdown" id="numMealsDropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            4
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">4</a>
+                            <a class="dropdown-item" href="#">5</a>
+                            <a class="dropdown-item" href="#">6</a>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-primary" id="submitButton">Submit</button>
+
+                <div class="mt-2 p-1 bg-danger" style="display: none; color: white" id="errorDiv"></div>
+            </div>
+            <div class="col col-xs-4 m-3 p-3" style="display: none" id="calculatorDisplayContainer">
+                <h3 id="calorieTargetHeader"></h3>
+                <h4 id="calorieListHeader"></h4>
+                <ul>
+                    <li id="carbCalorieListing"></li>
+                    <li id="proteinCalorieListing"></li>
+                    <li id="fatCalorieListing"></li>
+                </ul>
+                <h4 id="gramListHeader"></h4>
+                <ul>
+                    <li id="carbGramListing"></li>
+                    <li id="proteinGramListing"></li>
+                    <li id="fatGramListing"></li>
+                </ul>
+                <h4 id="mealListHeader">Per meal:</h4>
+                <ul>
+                    <li id="carbMealListing"></li>
+                    <li id="proteinMealListing"></li>
+                    <li id="fatMealListing"></li>
+                </ul>
+                <a href="./cheat_sheet.pdf">
+                    <button class="btn btn-primary">View Cheat Sheet</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+        crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
