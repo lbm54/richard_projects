@@ -68,6 +68,10 @@ $(document).ready(function() {
     $("#fatMealListing").text("Your fat per meal: " + fatPerMeal);
 
     $("#calculatorDisplayContainer").fadeIn("slow");
+    $("html, body").animate(
+      { scrollTop: $("#calculatorDisplayContainer").offset().top },
+      2000
+    );
   });
 
   //listener for bodyweight input to change the calorie target
@@ -100,6 +104,10 @@ function getMultiplier() {
 function showError(message) {
   $("#errorDiv").text(message);
   $("#errorDiv").fadeIn("slow");
+  $("html, body").animate(
+    { scrollTop: $("#errorDiv").offset().top },
+    2000
+  );
   setTimeout(function() {
     $("#errorDiv").fadeOut("slow");
   }, 2000);
