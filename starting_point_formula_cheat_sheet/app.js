@@ -8,8 +8,8 @@ var WEIGHT_GAIN_MULT = 17;
 $(document).ready(function() {
   //changing the label on the dropdown menu when selecting a menuitem
   $(".dropdown-menu a").click(function() {
-    $(".btn:first-child").text($(this).text());
-    $(".btn:first-child").val($(this).text());
+    $("#dropdownMenuButton:first-child").text($(this).text());
+    $("#dropdownMenuButton:first-child").val($(this).text());
   });
 
   //submitting the form
